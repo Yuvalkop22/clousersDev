@@ -1,5 +1,5 @@
 let state = false;
-const body = document.getElementById("body");
+// const body = document.getElementById("body");
 const popupDiv = document.getElementById("popup");
 let img = document.createElement('img');
 img.setAttribute('style','width: 150px; height: 150px; border-radius:100px');
@@ -28,13 +28,17 @@ function popup(popupBody, options){
         options.close();
     }
 }
+function closeByClickOutside(options){
+    options.close();
+}
 function init(){
     const popupBody = "https://avatars.githubusercontent.com/u/80945323?v=4"
-    body.addEventListener('click',()=>{
+    btnPopup.addEventListener('click',(event)=>{
+        event.stopPropagation();
         popup(popupBody,openClose);
     })
-    btnPopup.addEventListener('click',()=>{
-        popup(popupBody,openClose);
+    body.addEventListener('click',()=>{
+        closeByClickOutside(openClose);
     })
 }
 init();
