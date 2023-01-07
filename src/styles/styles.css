@@ -6,3 +6,11 @@
     align-items: center;
     display: flex;
 }
+.formDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: fit-content;
+    text-align: center;
+}
