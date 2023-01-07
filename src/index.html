@@ -9,5 +9,30 @@
 <body id="body">
     <button id="btnPopup">Click to popup</button>
     <div class="popup" id="popup" style="visibility: hidden;"></div>
+    <div id='form' class='formDiv'>
+        <form>
+            <div>
+                <label>Enter your first name:</label>
+                <input id='firstName' placeholder='enter first name' />
+                <h3 id='errorFirstName'></h3>
+            </div>
+            <div>
+                <label>Enter your last name:</label>
+                <input id='lastName' placeholder='enter last name' />
+                <h3 id='errorLastName'></h3>
+            </div>
+            <div>
+                <label>Enter your email:</label>
+                <input id='email' placeholder='enter email' />
+                <h3 id='errorEmail'></h3>
+            </div>
+            <div>
+                <label>Enter your age:</label>
+                <input id='age' placeholder='enter age' />
+                <h3 id='errorAge'></h3>
+            </div>
+            <button id='btnForm' onclick="submit()">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
